@@ -54,6 +54,12 @@ const Navbar = () => {
             >
               Our Mentors
             </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+            >
+              Contact Us
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -87,6 +93,12 @@ const Navbar = () => {
               className="block w-full text-left text-foreground/80 hover:text-foreground transition-colors font-medium py-2"
             >
               Our Mentors
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="block w-full text-left text-foreground/80 hover:text-foreground transition-colors font-medium py-2"
+            >
+              Contact Us
             </button>
           </div>
         )}
