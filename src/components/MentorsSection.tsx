@@ -5,10 +5,14 @@ import divyaPhoto from "@/assets/divya.jpg";
 
 const MentorsSection = () => {
   return (
-    <section id="mentors" className="py-24 relative overflow-hidden bg-gradient-to-br from-navy via-navy to-burnt-red">
-      {/* Decorative elements */}
-      <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-bl from-fire-gold/10 via-fire-orange/10 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-tr from-fire-lava/10 via-secondary/10 to-transparent rounded-full blur-3xl" />
+    <section id="mentors" className="py-24 relative overflow-hidden bg-gradient-to-br from-navy-dark via-background to-burnt-red">
+      {/* Premium decorative elements */}
+      <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-bl from-fire-gold/20 via-fire-orange/20 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-tr from-fire-lava/20 via-secondary/20 to-transparent rounded-full blur-3xl" />
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 border-2 border-primary rounded-full animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border-2 border-secondary rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-5xl md:text-6xl font-bold fire-gradient text-center mb-16 animate-in fade-in slide-in-from-top duration-700">
@@ -16,7 +20,7 @@ const MentorsSection = () => {
         </h2>
 
         <div className="max-w-2xl mx-auto mb-12">
-          <Card className="p-10 border-4 border-fire-gold/50 gold-glow bg-card/95 backdrop-blur-sm hover-lift animate-in fade-in zoom-in duration-700 delay-200">
+          <Card className="p-10 premium-card border-4 border-fire-gold/50 gold-glow backdrop-blur-sm hover-lift animate-in fade-in zoom-in duration-700 delay-200">
             <div className="flex flex-col items-center text-center space-y-6">
               <div className="relative">
                 <img
@@ -31,7 +35,7 @@ const MentorsSection = () => {
                 <h3 className="text-3xl font-bold fire-gradient mb-2">Divya Darsheel Sharma</h3>
                 <p className="text-fire-gold text-lg font-semibold mb-4">Lead Mentor</p>
                 
-                <p className="text-white/90 text-lg leading-relaxed mb-6">
+                <p className="text-foreground/90 text-lg leading-relaxed mb-6">
                   He guided us throughout our hackathon journey. His extraordinary talent and 
                   mentorship shaped our entire team. He is the one who formed Team Inferno.
                 </p>
@@ -50,10 +54,10 @@ const MentorsSection = () => {
         </div>
 
         <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom duration-700 delay-400">
-          <p className="text-white/80 text-lg">
+          <p className="text-foreground/80 text-lg">
             Honourable mention to <span className="text-fire-gold font-semibold">Kritagya Poudel</span> for his support.
           </p>
-          <p className="text-white/70 text-lg italic">
+          <p className="text-foreground/70 text-lg italic">
             We thank everyone who helped us in this journey.
           </p>
         </div>
