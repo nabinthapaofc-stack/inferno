@@ -2,24 +2,6 @@
 
 A modern, high-tech website showcasing Team Inferno - a passionate group of developers formed during a Grade 11 hackathon training program. This website features a unique fiery cyber-tech aesthetic that represents our team's innovative spirit and technical prowess.
 
-![Team Inferno Banner](https://img.shields.io/badge/Team-Inferno-ED882D?style=for-the-badge&logo=fire&logoColor=white)
-![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-## 🌟 Live Demo
-
-[**View Live Website**](#) _(Add your deployed URL here)_
-
-## 📸 Screenshots
-
-### Hero Section
-![Hero Section](./screenshots/hero.png)
-
-### Team Section
-![Team Section](./screenshots/team.png)
-
-### Mentors Section
-![Mentors Section](./screenshots/mentors.png)
 
 ## ✨ Features
 
