@@ -60,7 +60,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center">
             <Button
-              className="rounded-full px-6 py-2 text-sm font-semibold tracking-wide bg-gradient-to-r from-primary via-fire-orange to-secondary shadow-lg hover:shadow-xl border border-white/10"
+              className="rounded-full px-6 py-2 text-sm font-semibold tracking-[0.25em] uppercase bg-gradient-to-r from-fire-gold via-fire-orange to-cyber-cyan text-background shadow-[0_15px_45px_rgba(0,0,0,0.45)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.55)] border border-white/15 transition-all"
               onClick={() => scrollToSection("contact")}
             >
               Let's Connect

@@ -101,7 +101,7 @@ const ContactSection = () => {
                 </div>
                 <a
                   href="mailto:inferno.hackathon@gmail.com"
-                  className="inline-flex items-center justify-center w-full rounded-full bg-gradient-to-r from-primary via-fire-orange to-secondary py-4 text-lg font-semibold text-background shadow-lg hover:shadow-xl transition-shadow"
+                  className="inline-flex items-center justify-center w-full rounded-full bg-gradient-to-r from-fire-gold via-fire-orange to-cyber-cyan py-4 text-lg font-semibold text-background shadow-[0_15px_45px_rgba(0,0,0,0.55)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.6)] transition-all border border-white/20 tracking-[0.2em] uppercase"
                 >
                   Start a conversation
                 </a>

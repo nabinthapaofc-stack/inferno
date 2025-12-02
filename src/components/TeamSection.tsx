@@ -2,7 +2,8 @@ import { Card } from "@/components/ui/card";
 import nabinPhoto from "@/assets/nabin-photo.png";
 import birasatPhoto from "@/assets/birasat.jpg";
 import abhiPhoto from "@/assets/abhi.jpg";
-import aayushPhoto from "@/assets/aayush.jpg";
+
+const aayushPhoto = "/aayush-neupane.jpg";
 
 interface TeamMember {
   name: string;
