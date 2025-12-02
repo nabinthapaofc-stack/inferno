@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import TeamSection from "@/components/TeamSection";
 import MentorsSection from "@/components/MentorsSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <AboutSection />
       <TeamSection />
       <MentorsSection />
+      <ContactSection />
       
       {/* Footer */}
       <footer className="bg-background py-8 border-t border-primary/20">
