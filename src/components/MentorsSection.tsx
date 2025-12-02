@@ -3,6 +3,29 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import divyaPhoto from "@/assets/divya.jpg";
 
+const kritagyaPhoto = "/kritagya.jpg";
+
+const mentorHighlights = [
+  {
+    name: "Divya Darsheel Sharma",
+    title: "Lead Mentor & President",
+    description:
+      "He guided us throughout our hackathon journey. His extraordinary talent and mentorship shaped our entire team. He is the one who formed Team Inferno.",
+    badge: "Vision Architect",
+    photo: divyaPhoto,
+    ctaLabel: "View Portfolio",
+    ctaLink: "https://dds3579.github.io/portfolio/",
+  },
+  {
+    name: "Kritagya Poudel",
+    title: "Science & Technology Head",
+    description:
+      "Our systems mentor and helper who kept the forge alive during hackathon training—bridging hardware, research, and rapid prototyping when the stakes were highest.",
+    badge: "Helper • Momentum Maker",
+    photo: kritagyaPhoto,
+  },
+];
+
 const MentorsSection = () => {
   return (
     <section id="mentors" className="py-24 relative overflow-hidden bg-gradient-to-br from-navy-dark via-background to-burnt-red">
@@ -19,47 +42,53 @@ const MentorsSection = () => {
           Our Mentors
         </h2>
 
-        <div className="max-w-2xl mx-auto mb-12">
-          <Card className="p-10 premium-card border-4 border-fire-gold/50 gold-glow backdrop-blur-sm hover-lift animate-in fade-in zoom-in duration-700 delay-200">
-            <div className="flex flex-col items-center text-center space-y-6">
-              <div className="relative">
-                <img
-                  src={divyaPhoto}
-                  alt="Divya Darsheel Sharma"
-                  className="w-40 h-40 rounded-full object-cover border-6 border-fire-gold"
-                />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-fire-orange/30 to-fire-gold/30 animate-pulse gold-glow" />
+        <div className="grid gap-10 lg:grid-cols-2">
+          {mentorHighlights.map((mentor, index) => (
+            <Card
+              key={mentor.name}
+              className="p-10 premium-card border-4 border-white/10 bg-black/30 backdrop-blur-xl hover-lift shadow-[0_20px_80px_rgba(0,0,0,0.5)] animate-in fade-in zoom-in"
+              style={{ animationDelay: `${(index + 1) * 150}ms` }}
+            >
+              <div className="flex flex-col items-center text-center space-y-6">
+                <div className="relative">
+                  {mentor.photo ? (
+                    <img
+                      src={mentor.photo}
+                      alt={mentor.name}
+                      className="w-40 h-40 rounded-full object-cover border-6 border-primary/50"
+                    />
+                  ) : (
+                    <div className="w-40 h-40 rounded-full border-6 border-primary/50 bg-gradient-to-br from-primary/40 via-background to-secondary/40 flex items-center justify-center text-3xl font-bold text-white">
+                      {mentor.name[0]}
+                    </div>
+                  )}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 animate-pulse" />
+                </div>
+
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-white/20 text-xs tracking-[0.35em] uppercase text-white/70">
+                    {mentor.badge}
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold fire-gradient mb-2">{mentor.name}</h3>
+                    <p className="text-white/80 text-lg font-semibold mb-4">{mentor.title}</p>
+                    <p className="text-foreground/90 text-lg leading-relaxed">{mentor.description}</p>
+                  </div>
+
+                  {mentor.ctaLabel && mentor.ctaLink && (
+                    <Button
+                      variant="default"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground cyber-glow transition-all duration-300 hover:scale-105"
+                      onClick={() => window.open(mentor.ctaLink!, "_blank")}
+                    >
+                      {mentor.ctaLabel}
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Button>
+                  )}
+                </div>
               </div>
-
-              <div>
-                <h3 className="text-3xl font-bold fire-gradient mb-2">Divya Darsheel Sharma</h3>
-                <p className="text-fire-gold text-lg font-semibold mb-4">Lead Mentor</p>
-                
-                <p className="text-foreground/90 text-lg leading-relaxed mb-6">
-                  He guided us throughout our hackathon journey. His extraordinary talent and 
-                  mentorship shaped our entire team. He is the one who formed Team Inferno.
-                </p>
-
-                <Button
-                  variant="default"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground cyber-glow transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open("https://dds3579.github.io/portfolio/", "_blank")}
-                >
-                  View Portfolio
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </Card>
-        </div>
-
-        <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom duration-700 delay-400">
-          <p className="text-foreground/80 text-lg">
-            Honourable mention to <span className="text-fire-gold font-semibold">Kritagya Poudel</span> for his support.
-          </p>
-          <p className="text-foreground/70 text-lg italic">
-            We thank everyone who helped us in this journey.
-          </p>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

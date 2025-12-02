@@ -7,7 +7,8 @@ import aayushPhoto from "@/assets/aayush.jpg";
 interface TeamMember {
   name: string;
   role: string;
-  photo: string;
+  photo?: string;
+  initials?: string;
   isLeader?: boolean;
 }
 
@@ -79,11 +80,17 @@ const TeamSection = () => {
               >
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="relative">
-                    <img
-                      src={member.photo}
-                      alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover border-4 border-primary/50"
-                    />
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-24 h-24 rounded-full object-cover border-4 border-primary/50"
+                      />
+                    ) : (
+                      <div className="w-24 h-24 rounded-full border-4 border-primary/50 bg-gradient-to-br from-primary/40 via-background to-secondary/40 flex items-center justify-center text-2xl font-bold text-white">
+                        {member.initials ?? member.name[0]}
+                      </div>
+                    )}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
@@ -93,6 +100,7 @@ const TeamSection = () => {
               </Card>
             ))}
           </div>
+
         </div>
       </div>
     </section>

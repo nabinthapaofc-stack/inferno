@@ -54,11 +54,14 @@ const HeroSection = () => {
           <div className="flex-1 flex justify-center lg:justify-end animate-in fade-in slide-in-from-right duration-1000 delay-200">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl group-hover:blur-2xl transition-all duration-500" />
-              <img
-                src={infernoLogo}
-                alt="Team Inferno Logo"
-                className="relative w-72 h-72 md:w-96 md:h-96 object-contain drop-shadow-2xl premium-glow transition-all duration-500 group-hover:scale-105"
-              />
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full p-1 bg-gradient-to-br from-primary via-background to-secondary shadow-[0_0_40px_rgba(255,129,33,0.35)]">
+                <div className="absolute inset-2 rounded-full border border-white/20/" />
+                <img
+                  src={infernoLogo}
+                  alt="Team Inferno Logo"
+                  className="w-full h-full rounded-full object-cover border-4 border-background/70 drop-shadow-2xl premium-glow transition-all duration-500 group-hover:scale-105"
+                />
+              </div>
             </div>
           </div>
         </div>
