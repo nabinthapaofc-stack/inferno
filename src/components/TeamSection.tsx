@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import nabinPhoto from "@/assets/nabin.jpg";
+import nabinPhoto from "@/assets/nabin-photo.png";
 import birasatPhoto from "@/assets/birasat.jpg";
 import abhiPhoto from "@/assets/abhi.jpg";
 import aayushPhoto from "@/assets/aayush.jpg";
@@ -37,8 +37,13 @@ const teamMembers: TeamMember[] = [
 
 const TeamSection = () => {
   return (
-    <section id="team" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="team" className="py-24 bg-background relative overflow-hidden">
+      {/* Premium background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background opacity-50" />
+      <div className="absolute top-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-5xl md:text-6xl font-bold fire-gradient text-center mb-16 animate-in fade-in slide-in-from-top duration-700">
           Our Team
         </h2>
@@ -46,15 +51,15 @@ const TeamSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Team Leader - Top */}
           <div className="flex justify-center mb-12 animate-in fade-in zoom-in duration-700 delay-100">
-            <Card className={`p-8 hover-lift cyber-glow border-2 border-primary/30 bg-card w-full max-w-md`}>
+            <Card className="p-8 hover-lift premium-card border-4 border-fire-gold/30 bg-card w-full max-w-md gold-glow">
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="relative">
                   <img
                     src={teamMembers[0].photo}
                     alt={teamMembers[0].name}
-                    className="w-32 h-32 rounded-full object-cover border-4 border-fire-gold gold-glow"
+                    className="w-32 h-32 rounded-full object-cover border-4 border-fire-gold"
                   />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-fire-orange/20 to-fire-gold/20 animate-pulse" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-fire-orange/30 to-fire-gold/30 animate-pulse gold-glow" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-1">{teamMembers[0].name}</h3>
@@ -69,7 +74,7 @@ const TeamSection = () => {
             {teamMembers.slice(1).map((member, index) => (
               <Card
                 key={member.name}
-                className="p-6 hover-lift border-2 border-primary/20 bg-card transition-all duration-300 hover:border-primary/40 animate-in fade-in zoom-in duration-700"
+                className="p-6 hover-lift premium-card border-2 border-primary/20 bg-card transition-all duration-300 hover:border-primary/40 cyber-glow animate-in fade-in zoom-in duration-700"
                 style={{ animationDelay: `${(index + 2) * 100}ms` }}
               >
                 <div className="flex flex-col items-center text-center space-y-4">
@@ -77,7 +82,7 @@ const TeamSection = () => {
                     <img
                       src={member.photo}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover border-4 border-primary/50 cyber-glow"
+                      className="w-24 h-24 rounded-full object-cover border-4 border-primary/50"
                     />
                   </div>
                   <div>
